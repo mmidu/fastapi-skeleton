@@ -1,4 +1,4 @@
 parameters:
-    - IMAGE
-    - SERVICE_ID
-    - PORT
+  - IMAGE
+  - SERVICE_ID
+  - PORT
