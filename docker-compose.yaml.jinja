@@ -1,9 +1,9 @@
 build:
-  context: ${PWD}
+  context: ${PWD}/{{ SERVICE_ID }}
 image: ${SERVICE_ID}
 container_name: ${SERVICE_ID}
-env_file: ${PWD}/.env
+env_file: ${PWD}/{{ SERVICE_ID }}/.env
 volumes:
-  - ${PWD}/src:/src
+  - ${PWD}/{{ SERVICE_ID }}/src:/src
 ports:
   - ${EXTERNAL_PORT}:8080
