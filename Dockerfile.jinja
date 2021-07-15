@@ -3,7 +3,7 @@ FROM {{ IMAGE|default('python:3.9', true) }}
 WORKDIR /src
 COPY requirements.txt .
 
-RUN pip3 install --no-cache-dir -r /requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 EXPOSE {{ PORT|default(8080, true) }}
 
