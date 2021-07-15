@@ -1,10 +1,9 @@
-  {{ SERVICE_ID|default('SERVICE_ID', true) }}:
-    build:
-      context: ${PWD}
-    image: ${SERVICE_ID}
-    container_name: ${SERVICE_ID}
-    env_file: ${PWD}/.env
-    volumes:
-      - ${PWD}/src:/src
-    ports:
-      - ${EXTERNAL_PORT}:8080
+build:
+  context: ${PWD}
+image: ${SERVICE_ID}
+container_name: ${SERVICE_ID}
+env_file: ${PWD}/.env
+volumes:
+  - ${PWD}/src:/src
+ports:
+  - ${EXTERNAL_PORT}:8080
