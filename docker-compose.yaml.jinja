@@ -1,7 +1,6 @@
   {{ SERVICE_ID|default('SERVICE_ID', true) }}:
     build:
       context: ${PWD}
-      dockerfile: Dockerfile.dev
     image: ${SERVICE_ID}
     container_name: ${SERVICE_ID}
     env_file: ${PWD}/.env
