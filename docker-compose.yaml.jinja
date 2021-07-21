@@ -6,4 +6,4 @@ env_file: $PWD/{{ SERVICE_ID }}/.env
 volumes:
   - $PWD/{{ SERVICE_ID }}/src:/src
 ports:
-  - ${{ SERVICE_ID|upper }}_EXTERNAL_PORT:8080
+  - ${{ SERVICE_ID|upper }}_EXTERNAL_PORT:{{ PORT|default(8080, true) }}
